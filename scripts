@@ -1,0 +1,33 @@
+import csv
+from typing import List
+
+
+def makespan_chain(times: List[float]) -> float:
+    return float(sum(times))
+
+
+def makespan_graph(times: List[float], t_agg: float) -> float:
+    return float(max(times) + t_agg)
+
+
+def main(path: str) -> None:
+    with open(path, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            case_id = row["case_id"]
+            t = [float(row[k]) for k in ["t1", "t2", "t3", "t4", "t5"]]
+            t_agg = float(row["t_agg"])
+            t_chain = makespan_chain(t)
+            t_graph = makespan_graph(t, t_agg)
+            print(f"{case_id}: T_chain={t_chain:.3f}s, T_graph={t_graph:.3f}s")
+
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) != 2:
+        print("Usage: python scripts/makespan_demo.py data/makespan_cases.csv")
+        sys.exit(1)
+    main(sys.argv[1])
+
+
