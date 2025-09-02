@@ -52,7 +52,7 @@ public static class GraphChapter4
 			return new FunctionGraphNode(KernelFunctionFactory.CreateFromMethod(async (KernelArguments a) =>
 			{
 				var basis = a.TryGetValue("base", out var bv) ? Convert.ToInt32(bv) : 0;
-				var outcome = (basis + idx) % 3 switch
+				var outcome = ((basis + idx) % 3) switch
 				{
 					0 => "success",
 					1 => "partial",

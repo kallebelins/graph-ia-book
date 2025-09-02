@@ -38,7 +38,7 @@ public static class ChainChapter4
 		{
 			var idx = a.TryGetValue("idx", out var iv) ? Convert.ToInt32(iv) : 0;
 			var basis = a.TryGetValue("base", out var bv) ? Convert.ToInt32(bv) : 0;
-			var outcome = (basis + idx) % 3 switch
+			var outcome = ((basis + idx) % 3) switch
 			{
 				0 => "success",
 				1 => "partial",
@@ -63,16 +63,16 @@ public static class ChainChapter4
 			if (outcome == "partial")
 			{
 				await Task.Delay(HandlePartialMs);
-				a["last_handle"] = $"recover_{i}";
+				args["last_handle"] = $"recover_{i}";
 			}
 			else if (outcome == "critical")
 			{
 				await Task.Delay(HandleCriticalMs);
-				a["last_handle"] = $"abort_{i}";
+				args["last_handle"] = $"abort_{i}";
 			}
 			else
 			{
-				a.Remove("last_handle");
+				args.Remove("last_handle");
 			}
 		}
 

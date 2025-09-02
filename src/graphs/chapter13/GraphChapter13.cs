@@ -47,7 +47,7 @@ public static class GraphChapter13
 			return "header";
 		}, "ParseHeader"), nodeId: "parseHeader");
 
-!		var parseBody = new FunctionGraphNode(KernelFunctionFactory.CreateFromMethod(async (KernelArguments a) =>
+		var parseBody = new FunctionGraphNode(KernelFunctionFactory.CreateFromMethod(async (KernelArguments a) =>
 		{
 			var norm = a.TryGetValue("norm", out var nv) ? nv?.ToString() ?? string.Empty : string.Empty;
 			var lines = norm.Split('\n', StringSplitOptions.RemoveEmptyEntries);

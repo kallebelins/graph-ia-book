@@ -1,0 +1,10 @@
+{
+  "Name": "cap9/theory/governance",
+  "Timestamp": "2025-09-02T22:29:40.7412178+00:00",
+  "Data": {
+    "chain_monitor_points": 2,
+    "graph_monitor_nodes": 3,
+    "supports_safe_routing": true,
+    "supports_local_policies": true
+  }
+}

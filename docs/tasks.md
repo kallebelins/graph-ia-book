@@ -170,12 +170,15 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap8_theory_fusion-summary.{json,md}`
 - [x] Doc: `docs/examples/11-capitulo-8.md`
 
-### 12-capitulo-9.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/12-capitulo-9.md`
+### 12-capitulo-9.md — Governança e Segurança em Grafos
+- [x] SK: chain com avaliação de política e bloqueio
+  - Código: `graph-ia-book/src/chains/chapter9/ChainChapter9.cs`
+- [x] SKG: grafo com PolicyGuard → Anonymizer → Processor
+  - Código: `graph-ia-book/src/graphs/chapter9/GraphChapter9.cs`
+- [x] Métricas: medir média, p95/p99; benchmark A/B chain vs graph
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter9.cs` (métodos `Run*`)
+- [x] Validação: teoria/checlist de governança por nó e desvio seguro
+- [x] Doc: `docs/examples/12-capitulo-9.md`
 
 ### 14-capitulo-10.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
