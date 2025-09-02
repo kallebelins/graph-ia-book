@@ -129,12 +129,15 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap2_theory_expressivity-summary.{json,md}`
 - [x] Doc: `docs/examples/03-capitulo-2.md`
 
-### 06-capitulo-4.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/06-capitulo-4.md`
+### 06-capitulo-4.md — Explosão de Estados e Modularidade
+- [x] SK: chain com 5 estágios e handling externo por estado
+  - Código: `graph-ia-book/src/chains/chapter4/ChainChapter4.cs`
+- [x] SKG: grafo com convergência em nó compartilhado de tratamento
+  - Código: `graph-ia-book/src/graphs/chapter4/GraphChapter4.cs`
+- [x] Métricas: medir média, p95/p99, A/B chain vs graph
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter4.cs` (métodos `Run*`)
+- [x] Validação: teoria k^n vs convergência (arquivo `cap4/theory/state-counts`)
+- [x] Doc: `docs/examples/06-capitulo-4.md`
 
 ### 08-capitulo-5.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
