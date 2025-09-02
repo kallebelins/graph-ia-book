@@ -180,12 +180,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Validação: teoria/checlist de governança por nó e desvio seguro
 - [x] Doc: `docs/examples/12-capitulo-9.md`
 
-### 14-capitulo-10.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/14-capitulo-10.md`
+### 14-capitulo-10.md — Diamante (Chain vs Grafo)
+- [x] SK: chain padrão diamante sequencial
+  - Código: `graph-ia-book/src/chains/chapter10/ChainChapter10.cs`
+- [x] SKG: grafo padrão diamante com ramos paralelos
+  - Código: `graph-ia-book/src/graphs/chapter10/GraphChapter10.cs`
+- [x] Métricas: média, p95/p99; benchmark A/B chain vs graph
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter10.cs` (métodos `Run*`)
+- [x] Validação: makespan do diamante (chain = soma; graph = max + merge)
+  - Arquivo gerado: `src/Benchmark/results/cap10_theory_diamond-makespan-summary.{json,md}`
+- [x] Doc: `docs/examples/14-capitulo-10.md`
 
 ### 15-capitulo-11.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
