@@ -105,10 +105,17 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivos gerados: `src/Benchmark/results/cap7_benchmark_success-theory-summary.json`, `src/Benchmark/results/cap7_benchmark_success-theory-summary.md`
 
 ### 18-capitulo-13.md — Limitações da Abordagem em Grafos
-- [ ] SK: chain trivial (CSV→JSON) para mostrar casos onde chain é melhor
-- [ ] SKG: grafo com sobrecarga de coordenação (ramos superficiais) para comparar custo
-- [ ] Métricas: TCO simplificado, latência, memória, logs
-- [ ] Validação: condição G < C do texto (ganho vs custo), experimento paramétrico
+- [x] SK: chain trivial (CSV→JSON) para mostrar casos onde chain é melhor
+  - Código: `graph-ia-book/src/chains/chapter13/ChainChapter13.cs`
+- [x] SKG: grafo com sobrecarga de coordenação (ramos superficiais) para comparar custo
+  - Código: `graph-ia-book/src/graphs/chapter13/GraphChapter13.cs`
+- [x] Métricas: TCO simplificado, latência, memória, logs
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter13.cs` (métodos `Run*`)
+  - Arquivos gerados (exemplos):
+    - `src/Benchmark/results/cap13_benchmark_chain-latency-summary.json` e `.md`
+    - `src/Benchmark/results/cap13_benchmark_graph-latency-summary.json` e `.md`
+    - `src/Benchmark/results/cap13_benchmark_gain-vs-cost-summary.json` e `.md`
+- [x] Validação: condição G < C do texto (ganho vs custo), experimento paramétrico
 - [x] Doc: `docs/examples/18-limitacoes-grafos.md` (ver `src/Benchmark/results/cap13_*`)
 
 ### 03-capitulo-2.md — A definir
