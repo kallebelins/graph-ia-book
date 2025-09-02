@@ -139,12 +139,14 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Validação: teoria k^n vs convergência (arquivo `cap4/theory/state-counts`)
 - [x] Doc: `docs/examples/06-capitulo-4.md`
 
-### 08-capitulo-5.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/08-capitulo-5.md`
+### 08-capitulo-5.md — Explicabilidade e Auditoria
+- [x] SK: chain com decisão imperativa (sem trilha explícita)
+  - Código: `graph-ia-book/src/chains/chapter5/ChainChapter5.cs`
+- [x] SKG: grafo com nó condicional e trilha de auditoria (streaming opcional)
+  - Código: `graph-ia-book/src/graphs/chapter5/GraphChapter5.cs`
+- [x] Métricas: medir média, p95/p99
+- [x] Validação: nota teórica sobre trilha explícita (graph) vs implícita (chain)
+- [x] Doc: `docs/examples/08-capitulo-5.md`
 
 ### 09-capitulo-6.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
