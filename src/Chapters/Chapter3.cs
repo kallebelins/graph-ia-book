@@ -1,6 +1,8 @@
 namespace GraphIABook.Chapters;
 
 using GraphIABook.Benchmark._common;
+using GraphIABook.Chains.Chapter3;
+using GraphIABook.Graphs.Chapter3;
 
 /// <summary>
 /// Capítulo 3 — Orquestração de Sistemas Inteligentes.
@@ -12,6 +14,7 @@ public sealed class Chapter3 : IChapter
 	public async Task RunChainAsync()
 	{
 		await RunChain_ConditionalDecisionAsync();
+		await RunChain_LatencyP95P99Async();
 	}
 
 	public async Task RunGraphAsync()
@@ -31,19 +34,24 @@ public sealed class Chapter3 : IChapter
 	/// </summary>
 	public async Task RunChain_ConditionalDecisionAsync()
 	{
-		await BenchmarkUtils.MeasureAsync("cap3/chain/conditional", async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 50);
+		await BenchmarkUtils.MeasureManyAsync("cap3/chain/conditional", iterations: inputs.Count, action: async () =>
 		{
-			// caminho A ou B (ex.: tempo diferente)
-			bool chooseA = DateTime.UtcNow.Millisecond % 2 == 0;
-			if (chooseA)
-			{
-				await Task.Delay(6);
-			}
-			else
-			{
-				await Task.Delay(9);
-			}
-			return "ok";
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			_ = await ChainChapter3.RunAsync(inputs[idx]);
+		});
+	}
+
+	/// <summary>
+	/// Sumariza latência do pipeline CHAIN com decisão condicional externa (média/p95/p99).
+	/// </summary>
+	public async Task RunChain_LatencyP95P99Async()
+	{
+		var inputs = TestFixtures.GetFixedTextInputs(count: 50);
+		await BenchmarkUtils.MeasureManyAsync("cap3/chain/latency-p95-p99", iterations: inputs.Count, action: async () =>
+		{
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			_ = await ChainChapter3.RunAsync(inputs[idx]);
 		});
 	}
 
@@ -52,12 +60,11 @@ public sealed class Chapter3 : IChapter
 	/// </summary>
 	public async Task RunGraph_ConditionalRoutingAsync()
 	{
-		await BenchmarkUtils.MeasureAsync("cap3/graph/routing", async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 20);
+		await BenchmarkUtils.MeasureManyAsync("cap3/graph/routing", iterations: inputs.Count, action: async () =>
 		{
-			var pathA = Task.Delay(6);
-			// Em gráfico real, a escolha poderia ser dinâmica; aqui simulamos a existência dos caminhos.
-			await pathA;
-			return "ok";
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			_ = await GraphChapter3.RunAsync(inputs[idx]);
 		});
 	}
 
@@ -66,10 +73,11 @@ public sealed class Chapter3 : IChapter
 	/// </summary>
 	public async Task RunGraph_LatencySummaryAsync()
 	{
-		await BenchmarkUtils.MeasureManyAsync("cap3/graph/latency-summary", iterations: 50, action: async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 50);
+		await BenchmarkUtils.MeasureManyAsync("cap3/graph/latency-summary", iterations: inputs.Count, action: async () =>
 		{
-			var pathA = Task.Delay(6);
-			await pathA;
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			_ = await GraphChapter3.RunAsync(inputs[idx]);
 		});
 	}
 
@@ -78,10 +86,16 @@ public sealed class Chapter3 : IChapter
 	/// </summary>
 	public async Task RunBenchmark_MergeCorrectnessAsync()
 	{
-		await BenchmarkUtils.MeasureAsync("cap3/benchmark/merge-correctness", async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 20);
+		await BenchmarkUtils.MeasureManyAsync("cap3/benchmark/merge-correctness", iterations: inputs.Count, action: async () =>
 		{
-			await Task.Delay(1);
-			return "ok";
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			var c = await ChainChapter3.RunAsync(inputs[idx]);
+			var g = await GraphChapter3.RunAsync(inputs[idx]);
+			if (!string.Equals(c, g, StringComparison.Ordinal))
+			{
+				throw new InvalidOperationException($"Merge mismatch: chain='{c}' graph='{g}'");
+			}
 		});
 	}
 
@@ -90,10 +104,12 @@ public sealed class Chapter3 : IChapter
 	/// </summary>
 	public async Task RunBenchmark_LatencyP95P99Async()
 	{
-		await BenchmarkUtils.MeasureManyAsync("cap3/benchmark/latency-p95-p99", iterations: 50, action: async () =>
-		{
-			await Task.Delay(6);
-		});
+		var inputs = TestFixtures.GetFixedTextInputs(count: 50);
+		await AbBenchmarkHarness.RunLatencyABAsync(
+			"cap3/benchmark/latency-p95-p99",
+			inputs,
+			async s => { _ = await ChainChapter3.RunAsync(s); },
+			async s => { _ = await GraphChapter3.RunAsync(s); });
 	}
 }
 

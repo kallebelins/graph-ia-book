@@ -1,6 +1,8 @@
 namespace GraphIABook.Chapters;
 
 using GraphIABook.Benchmark._common;
+using GraphIABook.Chains.Chapter1;
+using GraphIABook.Graphs.Chapter1;
 
 /// <summary>
 /// Capítulo 1 — Problema da Complexidade em IA.
@@ -36,6 +38,7 @@ public sealed class Chapter1 : IChapter
 	{
 		await RunBenchmark_LatencyVsCostAsync();
 		await RunBenchmark_LatencyP95P99Async();
+		WriteMakespanTheory();
 	}
 
 	/// <summary>
@@ -43,10 +46,15 @@ public sealed class Chapter1 : IChapter
 /// </summary>
 	public async Task RunChain_LatencyAsync()
 	{
-		await BenchmarkUtils.MeasureAsync("chapter1/chain/latency", async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 10);
+		await AbBenchmarkHarness.WarmupAsync(inputs.Take(2),
+			async s => { _ = await ChainChapter1.RunAsync(s); },
+			async s => { _ = await GraphChapter1.RunAsync(s); });
+
+		await BenchmarkUtils.MeasureManyAsync("chapter1/chain/latency", iterations: inputs.Count, action: async () =>
 		{
-			await Task.Delay(10);
-			return "ok";
+			var idx = Environment.TickCount % inputs.Count;
+			_ = await ChainChapter1.RunAsync(inputs[idx]);
 		});
 	}
 
@@ -55,10 +63,10 @@ public sealed class Chapter1 : IChapter
 /// </summary>
 	public async Task RunChain_CostAsync()
 	{
-		await BenchmarkUtils.MeasureAsync("chapter1/chain/cost", async () =>
+		// Simplified cost proxy: sum of stage delays as a stand-in for token cost.
+		await BenchmarkUtils.MeasureManyAsync("chapter1/chain/cost", iterations: 20, action: async () =>
 		{
-			await Task.Delay(5);
-			return "ok";
+			await Task.Delay(ChainChapter1.PreprocessMs + ChainChapter1.RetrieveMs + ChainChapter1.ReasonMs + ChainChapter1.AnswerMs);
 		});
 	}
 
@@ -67,12 +75,11 @@ public sealed class Chapter1 : IChapter
 /// </summary>
 	public async Task RunGraph_LatencyAsync()
 	{
-		await BenchmarkUtils.MeasureAsync("chapter1/graph/latency", async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 10);
+		await BenchmarkUtils.MeasureManyAsync("chapter1/graph/latency", iterations: inputs.Count, action: async () =>
 		{
-			var t1 = Task.Delay(5);
-			var t2 = Task.Delay(7);
-			await Task.WhenAll(t1, t2);
-			return "ok";
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			_ = await GraphChapter1.RunAsync(inputs[idx]);
 		});
 	}
 
@@ -81,10 +88,11 @@ public sealed class Chapter1 : IChapter
 /// </summary>
 	public async Task RunGraph_CostAsync()
 	{
-		await BenchmarkUtils.MeasureAsync("chapter1/graph/cost", async () =>
+		// Simplified cost proxy: max of parallel branches + merge + preprocess overhead
+		await BenchmarkUtils.MeasureManyAsync("chapter1/graph/cost", iterations: 20, action: async () =>
 		{
-			await Task.Delay(6);
-			return "ok";
+			var parallel = Math.Max(GraphChapter1.RetrieveMs, GraphChapter1.VerifyMs);
+			await Task.Delay(GraphChapter1.PreprocessMs + parallel + GraphChapter1.ReasonMs + GraphChapter1.MergeMs);
 		});
 	}
 
@@ -93,9 +101,11 @@ public sealed class Chapter1 : IChapter
 	/// </summary>
 	public async Task RunChain_LatencySummaryAsync()
 	{
-		await BenchmarkUtils.MeasureManyAsync("chapter1/chain/latency", iterations: 50, action: async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 50);
+		await BenchmarkUtils.MeasureManyAsync("chapter1/chain/latency", iterations: inputs.Count, action: async () =>
 		{
-			await Task.Delay(10);
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			_ = await ChainChapter1.RunAsync(inputs[idx]);
 		});
 	}
 
@@ -104,11 +114,11 @@ public sealed class Chapter1 : IChapter
 	/// </summary>
 	public async Task RunGraph_LatencySummaryAsync()
 	{
-		await BenchmarkUtils.MeasureManyAsync("chapter1/graph/latency", iterations: 50, action: async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 50);
+		await BenchmarkUtils.MeasureManyAsync("chapter1/graph/latency", iterations: inputs.Count, action: async () =>
 		{
-			var t1 = Task.Delay(5);
-			var t2 = Task.Delay(7);
-			await Task.WhenAll(t1, t2);
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			_ = await GraphChapter1.RunAsync(inputs[idx]);
 		});
 	}
 
@@ -117,11 +127,12 @@ public sealed class Chapter1 : IChapter
 /// </summary>
 	public async Task RunBenchmark_LatencyVsCostAsync()
 	{
-		await BenchmarkUtils.MeasureAsync("chapter1/benchmark/latency-vs-cost", async () =>
-		{
-			await Task.Delay(1);
-			return "ok";
-		});
+		var inputs = TestFixtures.GetFixedTextInputs(count: 30);
+		await AbBenchmarkHarness.RunLatencyABAsync(
+			"chapter1/benchmark/latency-vs-cost",
+			inputs,
+			async s => { _ = await ChainChapter1.RunAsync(s); },
+			async s => { _ = await GraphChapter1.RunAsync(s); });
 	}
 
 	/// <summary>
@@ -129,9 +140,33 @@ public sealed class Chapter1 : IChapter
 	/// </summary>
 	public async Task RunBenchmark_LatencyP95P99Async()
 	{
-		await BenchmarkUtils.MeasureManyAsync("chapter1/benchmark/latency-vs-cost", iterations: 50, action: async () =>
+		var inputs = TestFixtures.GetFixedTextInputs(count: 50);
+		await BenchmarkUtils.MeasureManyAsync("chapter1/benchmark/latency-vs-cost", iterations: inputs.Count, action: async () =>
 		{
-			await Task.Delay(1);
+			var idx = Math.Abs(Environment.TickCount) % inputs.Count;
+			_ = await ChainChapter1.RunAsync(inputs[idx]);
+		});
+	}
+
+	/// <summary>
+	/// Writes a theory file estimating makespan: chain=sum vs graph=max(parallel branches)+overheads.
+	/// Also emits the topological order of the graph for verification.
+	/// </summary>
+	public static void WriteMakespanTheory()
+	{
+		var graph = GraphChapter1.CreateExecutor();
+		var (isAcyclic, topo) = GraphValidationUtils.Analyze(graph);
+		var chainSum = ChainChapter1.PreprocessMs + ChainChapter1.RetrieveMs + ChainChapter1.ReasonMs + ChainChapter1.AnswerMs;
+		var graphParallel = Math.Max(GraphChapter1.RetrieveMs, GraphChapter1.VerifyMs);
+		var graphSum = GraphChapter1.PreprocessMs + graphParallel + GraphChapter1.ReasonMs + GraphChapter1.MergeMs;
+		BenchmarkUtils.WriteTheory("chapter1/theory/makespan", new Dictionary<string, object>
+		{
+			["isAcyclic"] = isAcyclic,
+			["topologicalOrder"] = topo is null ? "" : string.Join(" -> ", topo),
+			["chain_ms_sum"] = chainSum,
+			["graph_ms_sum"] = graphSum,
+			["graph_parallel_branch_ms"] = graphParallel,
+			["brent_bound"] = graphSum // here it equals critical path due to static durations
 		});
 	}
 }

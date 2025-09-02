@@ -1,6 +1,8 @@
 namespace GraphIABook.Chapters;
 
 using GraphIABook.Benchmark._common;
+using GraphIABook.Chains._00eIntroducao;
+using GraphIABook.Graphs._00eIntroducao;
 
 /// <summary>
 /// Introdução — demonstra chain mínimo (entrada → LLM → resposta) e graph com dois ramos paralelos
@@ -33,35 +35,37 @@ public sealed class Chapter0e : IChapter
 	{
 		await RunBenchmark_MakespanAsync();
 		await RunBenchmark_LatencyP95P99Async();
+		await RunBenchmark_BrentTheoryAsync();
 	}
 
 	public async Task RunChain_LatencyAsync()
 	{
+		var input = TestFixtures.GetFixedTextInputs(1)[0];
 		await BenchmarkUtils.MeasureAsync("00e/chain/latency", async () =>
 		{
-			await Task.Delay(10);
-			return "ok";
+			var output = await Chain00e.RunAsync(input);
+			return output;
 		});
 	}
 
 	public async Task RunGraph_LatencyAsync()
 	{
+		var input = TestFixtures.GetFixedTextInputs(1)[0];
 		await BenchmarkUtils.MeasureAsync("00e/graph/latency", async () =>
 		{
-			var s = Task.Delay(6); // sumarização (simulada)
-			var e = Task.Delay(6); // extração (simulada)
-			await Task.WhenAll(s, e);
-			return "ok";
+			var output = await Graph00e.RunAsync(input);
+			return output;
 		});
 	}
 
 	public async Task RunGraph_LatencySummaryAsync()
 	{
+		var inputs = TestFixtures.GetFixedTextInputs(50);
+		int index = 0;
 		await BenchmarkUtils.MeasureManyAsync("00e/graph/latency", iterations: 50, action: async () =>
 		{
-			var s = Task.Delay(6);
-			var e = Task.Delay(6);
-			await Task.WhenAll(s, e);
+			var i = inputs[index++ % inputs.Count];
+			_ = await Graph00e.RunAsync(i);
 		});
 	}
 
@@ -80,6 +84,42 @@ public sealed class Chapter0e : IChapter
 		{
 			await Task.Delay(1);
 		});
+	}
+
+	/// <summary>
+	/// Validação matemática: limite por caminho crítico (Brent) para o exemplo de 2 ramos paralelos.
+	/// Assume tempos determinísticos dos estágios e compara makespan sequencial vs paralelo.
+	/// </summary>
+	public Task RunBenchmark_BrentTheoryAsync()
+	{
+		// Modelo simples: pipeline mínimo (1 estágio) vs grafo com 2 ramos paralelos A e B
+		// t_seq = t_stage1 + t_A + t_B
+		// t_par = t_stage1 + max(t_A, t_B)
+		// Bound de Brent: T_p >= max(T_1 / p, T_infty), com p=2, T_infty ≈ caminho crítico
+		var t_stage1 = 10; // ms (aprox. do chain simulado)
+		var t_A = 6; // ms
+		var t_B = 6; // ms
+		var p = 2; // dois ramos
+
+		var t1 = t_stage1 + t_A + t_B; // tempo sequencial
+		var tinf = t_stage1 + Math.Max(t_A, t_B); // caminho crítico (grafo)
+		var brentLower = Math.Max((int)Math.Ceiling((double)t1 / p), tinf);
+		var speedupIdeal = (double)t1 / tinf;
+
+		var data = new Dictionary<string, object>
+		{
+			["t_stage1_ms"] = t_stage1,
+			["t_A_ms"] = t_A,
+			["t_B_ms"] = t_B,
+			["t_seq_ms"] = t1,
+			["t_parallel_ms"] = tinf,
+			["processors_p"] = p,
+			["brent_lower_bound_ms"] = brentLower,
+			["speedup_ideal"] = Math.Round(speedupIdeal, 3)
+		};
+
+		BenchmarkUtils.WriteTheory("00e/benchmark/brent-theory", data);
+		return Task.CompletedTask;
 	}
 }
 

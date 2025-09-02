@@ -31,7 +31,7 @@ public static class GraphLoggingUtils
 	/// </summary>
 	public static async Task TraceExecutionAsync(
 		StreamingGraphExecutor executor,
-		IKernel kernel,
+		Kernel kernel,
 		KernelArguments arguments,
 		StreamingExecutionOptions? options = null,
 		CancellationToken cancellationToken = default)

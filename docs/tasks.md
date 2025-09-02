@@ -68,33 +68,37 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 ---
 
 ### 00e-introducao.md — Introdução
-- [ ] SK (chain): pipeline mínimo (entrada → LLM → resposta)
+- [x] SK (chain): pipeline mínimo (entrada → LLM → resposta)
   - Código: `graph-ia-book/src/chains/00e-introducao`
   - Script: `graph-ia-book/src/scripts/run-00e-chain.ps1` e `graph-ia-book/src/scripts/run-00e-chain.sh`
-- [ ] SKG (graph): mesmo fluxo com 2 ramos paralelos (ex.: sumarização e extração), convergindo em agregador
+- [x] SKG (graph): mesmo fluxo com 2 ramos paralelos (ex.: sumarização e extração), convergindo em agregador
   - Código: `graph-ia-book/src/graphs/00e-introducao`
   - Script: `graph-ia-book/src/scripts/run-00e-graph.ps1` e `graph-ia-book/src/scripts/run-00e-graph.sh`
 - [x] Métricas: latência média e p95; comparação do makespan com e sem paralelismo
-- [ ] Validação matemática: explicação do limite por caminho crítico (Brent) aplicada ao exemplo
+- [x] Validação matemática: explicação do limite por caminho crítico (Brent) aplicada ao exemplo
 - [x] Documentar resultados em `docs/examples/00-introducao.md` (ver saídas em `src/Benchmark/results/00e_*`)
 
 ### 02-capitulo-1.md — Problema da Complexidade em IA
-- [ ] SK: chain com 4 estágios sequenciais simulando acoplamento (ex.: preprocess → retrieve → reason → answer)
-- [ ] SKG: grafo com ramos independentes (retrieve paralelo + verificador), merge determinístico
+- [x] SK: chain com 4 estágios sequenciais simulando acoplamento (ex.: preprocess → retrieve → reason → answer)
+- [x] SKG: grafo com ramos independentes (retrieve paralelo + verificador), merge determinístico
 - [x] Métricas: soma sequencial vs máximo paralelo + custo de agregação; p95/p99
-- [ ] Prova/checagem: ordem topológica e estimativa de makespan comparativo
+- [x] Prova/checagem: ordem topológica e estimativa de makespan comparativo
 - [x] Doc: `docs/examples/02-problema-complexidade.md` (ver `src/Benchmark/results/chapter1_*`)
 
 ### 04-capitulo-3.md — Orquestração de Sistemas Inteligentes
-- [ ] SK: chain com decisão condicional implementada via if/switch externo (limitação)
-- [ ] SKG: nó de roteamento condicional nativo → dois caminhos → merge
+- [x] SK: chain com decisão condicional implementada via if/switch externo (limitação)
+  - Código: `graph-ia-book/src/chains/chapter3/ChainChapter3.cs`
+- [x] SKG: nó de roteamento condicional nativo → dois caminhos → merge
+  - Código: `graph-ia-book/src/graphs/chapter3/GraphChapter3.cs`
 - [x] Métricas: impacto da decisão no tempo médio e na variância
-- [ ] Validação: corretude da fusão determinística (política definida)
+- [x] Validação: corretude da fusão determinística (política definida)
 - [x] Doc: `docs/examples/04-orquestracao.md` (ver `src/Benchmark/results/cap3_*`)
 
 ### 10-capitulo-7.md — Recuperação e Resiliência
-- [ ] SK: chain com falha injetada no estágio 2 → aborta
-- [ ] SKG: fallback de `v2` para `v2'`, checkpoints e reexecução parcial
+- [x] SK: chain com falha injetada no estágio 2 → aborta
+  - Código: `graph-ia-book/src/chains/chapter7/ChainChapter7.cs`
+- [x] SKG: fallback de `v2` para `v2'`, checkpoints e reexecução parcial
+  - Código: `graph-ia-book/src/graphs/chapter7/GraphChapter7.cs`
 - [x] Métricas: taxa de sucesso sob falha, tempo adicional sob fallback, custo
 - [x] Validação: modelagem probabilística simples de sucesso composto 1−∏(1−p_i)
 - [x] Doc: `docs/examples/10-resiliencia.md` (ver `src/Benchmark/results/cap7_*`)

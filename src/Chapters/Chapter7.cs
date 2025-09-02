@@ -1,6 +1,8 @@
 namespace GraphIABook.Chapters;
 
 using GraphIABook.Benchmark._common;
+using GraphIABook.Chains.Chapter7;
+using GraphIABook.Graphs.Chapter7;
 
 /// <summary>
 /// Capítulo 7 — Recuperação e Resiliência.
@@ -35,9 +37,9 @@ public sealed class Chapter7 : IChapter
 	{
 		await BenchmarkUtils.MeasureAsync("cap7/chain/failure-abort", async () =>
 		{
-			await Task.Delay(4); // stage 1
-			// stage 2: falha
-			throw new InvalidOperationException("Injected failure in stage 2");
+			// Executa o chain real (falha injetada no estágio 2)
+			_ = await ChainChapter7.RunAsync("cap7-input");
+			return "ok"; // não alcançado, apenas para assinatura
 		});
 	}
 
@@ -48,18 +50,8 @@ public sealed class Chapter7 : IChapter
 	{
 		await BenchmarkUtils.MeasureAsync("cap7/graph/fallback", async () =>
 		{
-			await Task.Delay(3); // v1
-			var failed = true; // força caminho de fallback
-			if (failed)
-			{
-				await Task.Delay(3); // v2' fallback
-			}
-			else
-			{
-				await Task.Delay(8); // v2
-			}
-			await Task.Delay(2); // v3
-			return "ok";
+			var result = await GraphChapter7.RunAsync("cap7-input");
+			return result;
 		});
 	}
 

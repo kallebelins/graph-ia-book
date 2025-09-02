@@ -25,6 +25,11 @@ public static class BenchmarkUtils
 	public sealed record SuccessSummaryResult(string Name, int Iterations, int SuccessCount, double SuccessRate, DateTimeOffset Timestamp);
 
 	/// <summary>
+	/// Resultado genérico para teorias/validações (ex.: limites de Brent).
+	/// </summary>
+	public sealed record TheoryResult(string Name, DateTimeOffset Timestamp, IReadOnlyDictionary<string, object> Data);
+
+	/// <summary>
 	/// Mede a execução de uma função assíncrona e retorna o tempo decorrido.
 	/// </summary>
 	public static async Task<MeasurementResult> MeasureAsync(string name, Func<Task<string>> action)
@@ -148,6 +153,23 @@ public static class BenchmarkUtils
 	}
 
 	/// <summary>
+	/// Escreve um resultado teórico (pares chave/valor) em JSON e Markdown.
+	/// </summary>
+	public static void WriteTheory(string name, IReadOnlyDictionary<string, object> entries, string? resultsDirectory = null)
+	{
+		var defaultResultsDir = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "Benchmark", "results"));
+		var baseDir = resultsDirectory ?? defaultResultsDir;
+		Directory.CreateDirectory(baseDir);
+		var safeName = name.Replace('/', '_').Replace('\\', '_');
+		var jsonPath = Path.Combine(baseDir, $"{safeName}-summary.json");
+		var mdPath = Path.Combine(baseDir, $"{safeName}-summary.md");
+
+		var theory = new TheoryResult(name, DateTimeOffset.UtcNow, entries);
+		File.WriteAllText(jsonPath, JsonSerializer.Serialize(theory, new JsonSerializerOptions { WriteIndented = true }));
+		File.WriteAllText(mdPath, BuildMarkdown(theory));
+	}
+
+	/// <summary>
 	/// Constrói o conteúdo Markdown para o arquivo de resumo.
 	/// </summary>
 	private static string BuildMarkdown(SummaryResult s)
@@ -175,6 +197,22 @@ public static class BenchmarkUtils
 		sb.AppendLine($"- Sucessos: {s.SuccessCount}");
 		sb.AppendLine($"- Taxa de sucesso: {s.SuccessRate:P2}");
 		sb.AppendLine($"- Timestamp (UTC): {s.Timestamp:O}");
+		return sb.ToString();
+	}
+
+	/// <summary>
+	/// Constrói o conteúdo Markdown para dados teóricos (pares chave/valor).
+	/// </summary>
+	private static string BuildMarkdown(TheoryResult t)
+	{
+		var sb = new StringBuilder();
+		sb.AppendLine($"# {t.Name} — Validação Teórica");
+		sb.AppendLine();
+		sb.AppendLine($"- Timestamp (UTC): {t.Timestamp:O}");
+		foreach (var kvp in t.Data.OrderBy(k => k.Key))
+		{
+			sb.AppendLine($"- {kvp.Key}: {kvp.Value}");
+		}
 		return sb.ToString();
 	}
 }
