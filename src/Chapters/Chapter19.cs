@@ -1,0 +1,42 @@
+namespace GraphIABook.Chapters;
+
+using GraphIABook.Benchmark._common;
+
+/// <summary>
+/// Capítulo 19 — A definir. Consulte docs/book/26-capitulo-19.md.
+/// </summary>
+public sealed class Chapter19 : IChapter
+{
+	public async Task RunChainAsync() => await RunChain_DefaultAsync();
+	public async Task RunGraphAsync() => await RunGraph_DefaultAsync();
+	public async Task RunBenchmarkAsync() => await RunBenchmark_DefaultAsync();
+
+	public async Task RunChain_DefaultAsync()
+	{
+		await BenchmarkUtils.MeasureAsync("cap19/chain/default", async () =>
+		{
+			await Task.Delay(5);
+			return "ok";
+		});
+	}
+
+	public async Task RunGraph_DefaultAsync()
+	{
+		await BenchmarkUtils.MeasureAsync("cap19/graph/default", async () =>
+		{
+			await Task.Delay(5);
+			return "ok";
+		});
+	}
+
+	public async Task RunBenchmark_DefaultAsync()
+	{
+		await BenchmarkUtils.MeasureAsync("cap19/benchmark/default", async () =>
+		{
+			await Task.Delay(1);
+			return "ok";
+		});
+	}
+}
+
+

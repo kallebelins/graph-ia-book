@@ -1,0 +1,7 @@
+{
+  "Name": "cap7/benchmark/success-theory",
+  "TheoreticalSuccess": 0.94,
+  "MeasuredSuccess": 0.92,
+  "Iterations": 100,
+  "Timestamp": "2025-09-02T18:16:43.4058449+00:00"
+}

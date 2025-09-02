@@ -1,0 +1,8 @@
+{
+  "Name": "00e/benchmark/latency",
+  "Iterations": 50,
+  "MeanMs": 10,
+  "P95Ms": 16,
+  "P99Ms": 16,
+  "Timestamp": "2025-09-02T17:48:02.3119937+00:00"
+}
