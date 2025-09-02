@@ -148,12 +148,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Validação: nota teórica sobre trilha explícita (graph) vs implícita (chain)
 - [x] Doc: `docs/examples/08-capitulo-5.md`
 
-### 09-capitulo-6.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/09-capitulo-6.md`
+### 09-capitulo-6.md — Escalabilidade e Concorrência
+- [x] SK: chain com fan-out de 5 ramos executados sequencialmente
+  - Código: `graph-ia-book/src/chains/chapter6/ChainChapter6.cs`
+- [x] SKG: grafo com 5 ramos paralelos e agregador determinístico
+  - Código: `graph-ia-book/src/graphs/chapter6/GraphChapter6.cs`
+- [x] Métricas: medir média, p95/p99; A/B (chain vs graph)
+  - Implementadas em `graph-ia-book/src/Chapters/Chapter6.cs`
+- [x] Validação: caminho crítico vs soma sequencial; speedup teórico
+  - Arquivo gerado: `src/Benchmark/results/cap6_theory_critical-path-summary.{json,md}`
+- [x] Doc: `docs/examples/09-capitulo-6.md`
 
 ### 11-capitulo-8.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
