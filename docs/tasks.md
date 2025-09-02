@@ -118,12 +118,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Validação: condição G < C do texto (ganho vs custo), experimento paramétrico
 - [x] Doc: `docs/examples/18-limitacoes-grafos.md` (ver `src/Benchmark/results/cap13_*`)
 
-### 03-capitulo-2.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/03-capitulo-2.md`
+### 03-capitulo-2.md — Teoria de Grafos: Base Matemática
+- [x] SK: chain linear demonstrando caminho único
+  - Código: `graph-ia-book/src/chains/chapter2/ChainChapter2.cs`
+- [x] SKG: grafo com dois ramos paralelos e merge determinístico
+  - Código: `graph-ia-book/src/graphs/chapter2/GraphChapter2.cs`
+- [x] Métricas: latência média, p95/p99 e A/B (chain vs graph)
+  - Implementadas em `graph-ia-book/src/Chapters/Chapter2.cs`
+- [x] Validação: teoria de expressividade e ordem topológica (chain ⊂ DAG ⊂ graph)
+  - Arquivo gerado: `src/Benchmark/results/cap2_theory_expressivity-summary.{json,md}`
+- [x] Doc: `docs/examples/03-capitulo-2.md`
 
 ### 06-capitulo-4.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
