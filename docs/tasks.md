@@ -159,12 +159,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap6_theory_critical-path-summary.{json,md}`
 - [x] Doc: `docs/examples/09-capitulo-6.md`
 
-### 11-capitulo-8.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/11-capitulo-8.md`
+### 11-capitulo-8.md — Integração Multimodal e Híbrida
+- [x] SK: chain voz→texto→resposta (ignora imagem por desenho)
+  - Código: `graph-ia-book/src/chains/chapter8/ChainChapter8.cs`
+- [x] SKG: grafo multimodal (voz+imagem) com fusão tardia em nó `Fusion`
+  - Código: `graph-ia-book/src/graphs/chapter8/GraphChapter8.cs`
+- [x] Métricas: medir média, p95/p99; benchmark A/B chain vs graph
+  - Implementadas em `graph-ia-book/src/Chapters/Chapter8.cs` (métodos `Run*`)
+- [x] Validação: teoria de fusão (chain = soma; graph ≈ max + fusão)
+  - Arquivo gerado: `src/Benchmark/results/cap8_theory_fusion-summary.{json,md}`
+- [x] Doc: `docs/examples/11-capitulo-8.md`
 
 ### 12-capitulo-9.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
