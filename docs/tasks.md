@@ -421,10 +421,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/10-capitulo-7.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 7 -mode b`)
 
-- [ ] Capítulo 8 — Integração Multimodal (docs/book/11-capitulo-8.md)
-  - [ ] Consolidar `src/Benchmark/results/cap8_*`
-  - [ ] Criar `docs/reports/11-capitulo-8.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 8 -mode b`)
+- [x] Capítulo 8 — Integração Multimodal (docs/book/11-capitulo-8.md)
+  - [x] Consolidar `src/Benchmark/results/cap8_*`
+  - [x] Criar `docs/reports/11-capitulo-8.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 8 -mode b`)
 
 - [ ] Capítulo 9 — Governança (docs/book/12-capitulo-9.md)
   - [ ] Consolidar `src/Benchmark/results/cap9_*`
