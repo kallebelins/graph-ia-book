@@ -304,12 +304,12 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Validação: adicionar verificação/prova alinhada ao texto
 - [x] Doc: `docs/examples/31-capitulo-23.md`
 
-### 32-capitulo-24.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/32-capitulo-24.md`
+### 32-capitulo-24.md — Topologias e Anti-padrões
+- [x] SK: definir chain conforme tópico do capítulo
+- [x] SKG: definir grafo conforme tópico do capítulo
+- [x] Métricas: medir média, p95/p99, custo de tokens (latência padronizada)
+- [x] Validação: adicionar verificação/prova alinhada ao texto (makespan)
+- [x] Doc: `docs/examples/32-capitulo-24.md`
 
 ### 33-capitulo-25.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
