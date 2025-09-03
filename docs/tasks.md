@@ -349,19 +349,19 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 ---
 
 ### Itens recorrentes por capítulo (Checklist)
-- [ ] Implementar `ChapterX` com descrição clara do escopo do capítulo
-- [ ] Implementar `RunChainAsync`/`RunGraphAsync`/`RunBenchmarkAsync`
-- [ ] Documentar cada método com o que é testado/medido/comparado (XML docs) em português
-- [ ] Se houver múltiplas métricas: criar métodos específicos por palavra-chave e orquestrar via `Run*`
-- [ ] Implementar versão SK (chain) funcional, com entrada/saída estáveis
-- [ ] Implementar versão SKG (graph) funcional, com logs e tracing
-- [ ] Adicionar testes automatizados mínimos:
+- [x] Implementar `ChapterX` com descrição clara do escopo do capítulo
+- [x] Implementar `RunChainAsync`/`RunGraphAsync`/`RunBenchmarkAsync`
+- [x] Documentar cada método com o que é testado/medido/comparado (XML docs) em português
+- [x] Se houver múltiplas métricas: criar métodos específicos por palavra-chave e orquestrar via `Run*`
+- [x] Implementar versão SK (chain) funcional, com entrada/saída estáveis
+- [x] Implementar versão SKG (graph) funcional, com logs e tracing
+- [x] Adicionar testes automatizados mínimos:
   - Local: `graph-ia-book/src/tests` (para SK e SKG)
   - Verificações: aciclicidade (SKG), corretude de merge, ausência de exceções
-- [ ] Incluir script de execução reprodutível via PowerShell e bash (dir: `graph-ia-book/src/Scripts`) chamando `Program`
-- [ ] Medir métricas padronizadas (média, p95/p99, custo de tokens)
-- [ ] Exportar relatório Markdown + gráfico simples (boxplot/linha) no diretório do capítulo
-- [ ] Atualizar links cruzados na documentação do capítulo do livro
+- [x] Incluir script de execução reprodutível via PowerShell e bash (dir: `graph-ia-book/src/Scripts`) chamando `Program`
+- [x] Medir métricas padronizadas (média, p95/p99, custo de tokens)
+- [x] Exportar relatório Markdown + gráfico simples (boxplot/linha) no diretório do capítulo
+- [x] Atualizar links cruzados na documentação do capítulo do livro
 
 ---
 

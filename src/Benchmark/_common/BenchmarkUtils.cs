@@ -182,6 +182,12 @@ public static class BenchmarkUtils
 		sb.AppendLine($"- p95 (ms): {s.P95Ms}");
 		sb.AppendLine($"- p99 (ms): {s.P99Ms}");
 		sb.AppendLine($"- Timestamp (UTC): {s.Timestamp:O}");
+		sb.AppendLine();
+		sb.AppendLine("## Visualização (ASCII)");
+		sb.AppendLine();
+		sb.AppendLine(RenderAsciiBar("mean", s.MeanMs));
+		sb.AppendLine(RenderAsciiBar("p95", s.P95Ms));
+		sb.AppendLine(RenderAsciiBar("p99", s.P99Ms));
 		return sb.ToString();
 	}
 
@@ -197,6 +203,11 @@ public static class BenchmarkUtils
 		sb.AppendLine($"- Sucessos: {s.SuccessCount}");
 		sb.AppendLine($"- Taxa de sucesso: {s.SuccessRate:P2}");
 		sb.AppendLine($"- Timestamp (UTC): {s.Timestamp:O}");
+		sb.AppendLine();
+		sb.AppendLine("## Visualização (ASCII)");
+		sb.AppendLine();
+		var percent = (int)Math.Round(s.SuccessRate * 100);
+		sb.AppendLine(RenderAsciiBar("success%", percent));
 		return sb.ToString();
 	}
 
@@ -214,6 +225,13 @@ public static class BenchmarkUtils
 			sb.AppendLine($"- {kvp.Key}: {kvp.Value}");
 		}
 		return sb.ToString();
+	}
+
+	private static string RenderAsciiBar(string label, long value)
+	{
+		var clamped = Math.Max(0, Math.Min(value, 1000));
+		var units = (int)Math.Max(1, Math.Round(clamped / 10.0));
+		return $"{label.PadRight(8)} | {new string('#', units)} {value}ms";
 	}
 }
 
