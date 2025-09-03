@@ -322,11 +322,11 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Doc: `docs/examples/33-capitulo-25.md`
 
 ### 34-capitulo-26.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/34-capitulo-26.md`
+- [x] SK: definir chain conforme tópico do capítulo
+- [x] SKG: definir grafo conforme tópico do capítulo
+- [x] Métricas: medir média, p95/p99, custo de tokens
+- [x] Validação: adicionar verificação/prova alinhada ao texto
+- [x] Doc: `docs/examples/34-capitulo-26.md`
 
 ### 35-capitulo-15.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
@@ -345,7 +345,7 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 ### Itens recorrentes por capítulo (Checklist)
 - [ ] Implementar `ChapterX` com descrição clara do escopo do capítulo
 - [ ] Implementar `RunChainAsync`/`RunGraphAsync`/`RunBenchmarkAsync`
-- [ ] Documentar cada método com o que é testado/medido/comparado (XML docs)
+- [ ] Documentar cada método com o que é testado/medido/comparado (XML docs) em português
 - [ ] Se houver múltiplas métricas: criar métodos específicos por palavra-chave e orquestrar via `Run*`
 - [ ] Implementar versão SK (chain) funcional, com entrada/saída estáveis
 - [ ] Implementar versão SKG (graph) funcional, com logs e tracing
