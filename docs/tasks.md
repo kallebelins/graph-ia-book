@@ -213,12 +213,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap12/theory/autonomy-summary.{json,md}`
 - [x] Doc: `docs/examples/16-capitulo-12.md`
 
-### 19-capitulo-14.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/19-capitulo-14.md`
+### 19-capitulo-14.md — Tendências Futuras da Orquestração em Grafos
+- [x] SK: definir chain conforme tópico do capítulo
+  - Código: `graph-ia-book/src/chains/chapter14/ChainChapter14.cs`
+- [x] SKG: definir grafo conforme tópico do capítulo
+  - Código: `graph-ia-book/src/graphs/chapter14/GraphChapter14.cs`
+- [x] Métricas: medir média, p95/p99, custo de tokens
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter14.cs` (métodos `Run*`)
+- [x] Validação: adicionar verificação/prova alinhada ao texto
+  - Arquivo gerado: `src/Benchmark/results/cap14_benchmark_dynamic-rule-summary.{json,md}`
+- [x] Doc: `docs/examples/19-capitulo-14.md`
 
 ### 22-capitulo-16.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
