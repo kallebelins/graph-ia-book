@@ -431,10 +431,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/12-capitulo-9.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 9 -mode b`)
 
-- [ ] Capítulo 10 — Diamante (docs/book/14-capitulo-10.md)
-  - [ ] Consolidar `src/Benchmark/results/cap10_*`
-  - [ ] Criar `docs/reports/14-capitulo-10.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 10 -mode b`)
+- [x] Capítulo 10 — Diamante (docs/book/14-capitulo-10.md)
+  - [x] Consolidar `src/Benchmark/results/cap10_*`
+  - [x] Criar `docs/reports/14-capitulo-10.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 10 -mode b`)
 
 - [ ] Capítulo 11 — Aplicações (docs/book/15-capitulo-11.md)
   - [ ] Consolidar `src/Benchmark/results/cap11_*`
