@@ -328,12 +328,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Validação: adicionar verificação/prova alinhada ao texto
 - [x] Doc: `docs/examples/34-capitulo-26.md`
 
-### 35-capitulo-15.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/35-capitulo-15.md`
+### 35-capitulo-15.md — Síntese de três ramos (fan-out/fan-in)
+- [x] SK: definir chain conforme tópico do capítulo
+  - Código: `graph-ia-book/src/chains/chapter15/ChainChapter15.cs`
+- [x] SKG: definir grafo conforme tópico do capítulo
+  - Código: `graph-ia-book/src/graphs/chapter15/GraphChapter15.cs`
+- [x] Métricas: medir média, p95/p99, custo de tokens (proxy)
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter15.cs` (métodos `Run*`)
+- [x] Validação: adicionar verificação/prova alinhada ao texto (makespan soma vs max)
+  - Arquivo gerado: `src/Benchmark/results/cap15/theory/makespan-3branch-summary.{json,md}`
+- [x] Doc: `docs/examples/35-capitulo-15.md`
 
 ### 36-glossario-tecnico.md — Glossário
 - [ ] Criar exemplos mínimos por termo-chave (DAG, ordem topológica, betweenness, caminho crítico)
