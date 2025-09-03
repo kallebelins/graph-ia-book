@@ -401,10 +401,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/04-capitulo-3.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 3 -mode b`)
 
-- [ ] Capítulo 4 — Explosão de Estados (docs/book/06-capitulo-4.md)
-  - [ ] Consolidar `src/Benchmark/results/cap4_*`
-  - [ ] Criar `docs/reports/06-capitulo-4.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 4 -mode b`)
+- [x] Capítulo 4 — Explosão de Estados (docs/book/06-capitulo-4.md)
+  - [x] Consolidar `src/Benchmark/results/cap4_*`
+  - [x] Criar `docs/reports/06-capitulo-4.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 4 -mode b`)
 
 - [ ] Capítulo 5 — Explicabilidade (docs/book/08-capitulo-5.md)
   - [ ] Consolidar `src/Benchmark/results/cap5_*`
