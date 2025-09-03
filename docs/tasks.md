@@ -451,10 +451,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/18-capitulo-13.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 13 -mode b`)
 
-- [ ] Capítulo 14 — Tendências (docs/book/19-capitulo-14.md)
-  - [ ] Consolidar `src/Benchmark/results/cap14_*`
-  - [ ] Criar `docs/reports/19-capitulo-14.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 14 -mode b`)
+- [x] Capítulo 14 — Tendências (docs/book/19-capitulo-14.md)
+  - [x] Consolidar `src/Benchmark/results/cap14_*`
+  - [x] Criar `docs/reports/19-capitulo-14.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 14 -mode b`)
 
 - [ ] Capítulo 15 — Síntese 3 Ramos (docs/book/35-capitulo-15.md)
   - [ ] Consolidar `src/Benchmark/results/cap15_*`
