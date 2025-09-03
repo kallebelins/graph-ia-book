@@ -511,7 +511,7 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/33-capitulo-25.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 25 -mode b`)
 
-- [ ] Capítulo 26 — A definir (docs/book/34-capitulo-26.md)
-  - [ ] Consolidar `src/Benchmark/results/cap26_*`
-  - [ ] Criar `docs/reports/34-capitulo-26.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 26 -mode b`)
+- [x] Capítulo 26 — A definir (docs/book/34-capitulo-26.md)
+  - [x] Consolidar `src/Benchmark/results/cap26_*`
+  - [x] Criar `docs/reports/34-capitulo-26.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 26 -mode b`)
