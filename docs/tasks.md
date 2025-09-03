@@ -235,12 +235,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap16_theory_expressivity-proofs-summary.{json,md}`
 - [x] Doc: `docs/examples/22-capitulo-16.md`
 
-### 23-capitulo-17.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/23-capitulo-17.md`
+### 23-capitulo-17.md — Execução por Ordem Topológica e Caminho Crítico
+- [x] SK: definir chain conforme tópico do capítulo
+  - Código: `graph-ia-book/src/chains/chapter17/ChainChapter17.cs`
+- [x] SKG: definir grafo conforme tópico do capítulo
+  - Código: `graph-ia-book/src/graphs/chapter17/GraphChapter17.cs`
+- [x] Métricas: medir média, p95/p99, custo de tokens
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter17.cs` (métodos `Run*`)
+- [x] Validação: adicionar verificação/prova alinhada ao texto
+  - Arquivo gerado: `src/Benchmark/results/cap17_theory_scheduling-critical-path-summary.{json,md}`
+- [x] Doc: `docs/examples/23-capitulo-17.md`
 
 ### 24-capitulo-18.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
