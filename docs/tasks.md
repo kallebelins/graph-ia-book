@@ -202,12 +202,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivos gerados: `src/Benchmark/results/cap11/theory/*`
 - [x] Doc: `docs/examples/15-capitulo-11.md`
 
-### 16-capitulo-12.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/16-capitulo-12.md`
+### 16-capitulo-12.md — Agentes Autônomos com Grafos
+- [x] SK: chain rígido com decisão imperativa (agent-demo)
+  - Código: `graph-ia-book/src/chains/chapter12/ChainChapter12.cs`
+- [x] SKG: grafo com roteamento dinâmico (FAQ/Code/Escalate)
+  - Código: `graph-ia-book/src/graphs/chapter12/GraphChapter12.cs`
+- [x] Métricas: média, p95/p99; benchmark A/B chain vs graph
+  - Implementadas em `graph-ia-book/src/Chapters/Chapter12.cs`
+- [x] Validação: teoria de autonomia estrutural e aciclicidade do grafo
+  - Arquivo gerado: `src/Benchmark/results/cap12/theory/autonomy-summary.{json,md}`
+- [x] Doc: `docs/examples/16-capitulo-12.md`
 
 ### 19-capitulo-14.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
