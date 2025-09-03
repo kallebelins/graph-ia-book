@@ -1,7 +1,7 @@
 {
   "Name": "cap7/benchmark/success-rate",
   "Iterations": 100,
-  "SuccessCount": 96,
-  "SuccessRate": 0.96,
-  "Timestamp": "2025-09-03T06:51:17.6900426+00:00"
+  "SuccessCount": 98,
+  "SuccessRate": 0.98,
+  "Timestamp": "2025-09-03T15:02:24.3242004+00:00"
 }
