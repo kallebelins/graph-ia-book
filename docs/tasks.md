@@ -269,11 +269,11 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Doc: `docs/examples/26-capitulo-19.md`
 
 ### 27-capitulo-20.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/27-capitulo-20.md`
+- [x] SK: definir chain conforme tópico do capítulo
+- [x] SKG: definir grafo conforme tópico do capítulo
+- [x] Métricas: medir média, p95/p99, custo de tokens
+- [x] Validação: adicionar verificação/prova alinhada ao texto
+- [x] Doc: `docs/examples/27-capitulo-20.md`
 
 ### 28-capitulo-21.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
