@@ -286,12 +286,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap21/theory/markov-summary.{json,md}`
 - [x] Doc: `docs/examples/28-capitulo-21.md`
 
-### 29-capitulo-22.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/29-capitulo-22.md`
+### 29-capitulo-22.md — Resiliência Probabilística e Fallback
+- [x] SK: chain fallback sequencial
+  - Código: `graph-ia-book/src/chains/chapter22/ChainChapter22.cs`
+- [x] SKG: grafo OR paralelo com merge determinístico
+  - Código: `graph-ia-book/src/graphs/chapter22/GraphChapter22.cs`
+- [x] Métricas: média, p95/p99; benchmark A/B chain vs graph
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter22.cs` (métodos `Run*`)
+- [x] Validação: p_total e E[T] (seq) vs OR (aprox.)
+  - Arquivo gerado: `src/Benchmark/results/cap22/theory/fallback-summary.{json,md}`
+- [x] Doc: `docs/examples/29-capitulo-22.md`
 
 ### 31-capitulo-23.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
