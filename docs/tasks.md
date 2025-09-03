@@ -471,10 +471,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/23-capitulo-17.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 17 -mode b`)
 
-- [ ] Capítulo 18 — Álgebra de Grafos (docs/book/24-capitulo-18.md)
-  - [ ] Consolidar `src/Benchmark/results/cap18_*`
-  - [ ] Criar `docs/reports/24-capitulo-18.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 18 -mode b`)
+- [x] Capítulo 18 — Álgebra de Grafos (docs/book/24-capitulo-18.md)
+  - [x] Consolidar `src/Benchmark/results/cap18_*`
+  - [x] Criar `docs/reports/24-capitulo-18.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 18 -mode b`)
 
 - [ ] Capítulo 19 — Autômatos e Linguagens (docs/book/26-capitulo-19.md)
   - [ ] Consolidar `src/Benchmark/results/cap19_*`
