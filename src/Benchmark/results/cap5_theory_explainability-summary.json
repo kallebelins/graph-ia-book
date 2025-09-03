@@ -1,0 +1,9 @@
+{
+  "Name": "cap5/theory/explainability",
+  "Timestamp": "2025-09-03T06:50:52.347682+00:00",
+  "Data": {
+    "chain_trace": "implicit (no explicit path)",
+    "graph_trace": "explicit path with conditional evaluation events",
+    "compliance_note": "graphs enable audit trails aligning with AI governance"
+  }
+}

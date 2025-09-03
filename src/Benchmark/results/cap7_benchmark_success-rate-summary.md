@@ -1,6 +1,10 @@
 # cap7/benchmark/success-rate — Resumo de Sucesso
 
 - Iterações: 100
-- Sucessos: 99
-- Taxa de sucesso: 99,00%
-- Timestamp (UTC): 2025-09-02T18:16:40.9504192+00:00
+- Sucessos: 96
+- Taxa de sucesso: 96,00%
+- Timestamp (UTC): 2025-09-03T06:51:17.6900426+00:00
+
+## Visualização (ASCII)
+
+success% | ########## 96ms

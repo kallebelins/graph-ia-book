@@ -1,0 +1,8 @@
+{
+  "Name": "cap3/benchmark/latency-p95-p99_graph_latency",
+  "Iterations": 50,
+  "MeanMs": 44,
+  "P95Ms": 48,
+  "P99Ms": 53,
+  "Timestamp": "2025-09-03T06:50:32.0182516+00:00"
+}

@@ -73,8 +73,9 @@ public static class GraphChapter22
 		exec.SetStartNode("start");
 		exec.Connect("start", "build");
 		exec.Connect("build", "por");
-		exec.Connect("build", "tmin");
-		exec.Connect("por", "merge");
+		// Ensure tmin runs after probability is available to avoid missing 'p_or'
+		exec.Connect("por", "tmin");
+		// Trigger merge only after tmin to ensure 'expectedMs_or' is available
 		exec.Connect("tmin", "merge");
 		exec.ConfigureConcurrency(new GraphConcurrencyOptions { EnableParallelExecution = true, MaxDegreeOfParallelism = 2 });
 		return exec;

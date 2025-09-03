@@ -1,8 +1,8 @@
 {
   "Name": "cap9/benchmark/latency-ab_graph_latency",
   "Iterations": 24,
-  "MeanMs": 69,
-  "P95Ms": 88,
-  "P99Ms": 218,
-  "Timestamp": "2025-09-02T22:29:40.7354754+00:00"
+  "MeanMs": 67,
+  "P95Ms": 95,
+  "P99Ms": 118,
+  "Timestamp": "2025-09-03T06:51:43.5718359+00:00"
 }

@@ -1,0 +1,8 @@
+{
+  "Name": "cap11/benchmark/health_graph_latency",
+  "Iterations": 30,
+  "MeanMs": 47,
+  "P95Ms": 53,
+  "P99Ms": 56,
+  "Timestamp": "2025-09-03T06:52:22.8949038+00:00"
+}

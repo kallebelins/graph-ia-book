@@ -1,0 +1,25 @@
+{
+  "Name": "cap22/theory/fallback",
+  "Timestamp": "2025-09-03T06:55:16.730333+00:00",
+  "Data": {
+    "p": [
+      0.6,
+      0.5,
+      0.4
+    ],
+    "tMs": [
+      200,
+      120,
+      80
+    ],
+    "order": [
+      1,
+      0,
+      2
+    ],
+    "p_total": 0.88,
+    "E_T_seq_ms": 236,
+    "E_T_or_ms_approx": 94.4,
+    "notes": "Seq: E[T]=t1\u002B(1-p1)t2\u002B(1-p1)(1-p2)t3; OR: p=1-\u03A0(1-p_i); aproxima\u00E7\u00E3o para tempo esperado com cancelamento."
+  }
+}

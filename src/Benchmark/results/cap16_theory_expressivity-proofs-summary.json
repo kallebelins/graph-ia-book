@@ -1,0 +1,14 @@
+{
+  "Name": "cap16/theory/expressivity-proofs",
+  "Timestamp": "2025-09-03T06:53:35.3124789+00:00",
+  "Data": {
+    "k_modules": 6,
+    "t_module_ms": 60,
+    "alpha_merge_ms": 40,
+    "t_chain_sum_ms": 400,
+    "t_dag_parallel_ms": 100,
+    "t_reduce_tree_ms": 220,
+    "levels_log2_k": 3,
+    "relation": "Chain: k*t\u002B\u03B1; DAG: t\u002B\u03B1; Reduce: ceil(log2 k)*t\u002B\u03B1"
+  }
+}

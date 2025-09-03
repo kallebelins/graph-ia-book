@@ -1,0 +1,12 @@
+{
+  "Name": "cap19/theory/regularity-nfa-dfa",
+  "Timestamp": "2025-09-03T06:54:41.0337918+00:00",
+  "Data": {
+    "alphabet": "abc",
+    "dfa_reachable_states": 4,
+    "accepts_ac": true,
+    "accepts_bc": true,
+    "accepts_a": false,
+    "thesis": "Finite labeled DAG induces a regular language via NFA; determinization yields DFA"
+  }
+}

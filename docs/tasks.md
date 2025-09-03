@@ -374,3 +374,144 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 Para cada exemplo SKG, usar os padrões de projeto, nomenclatura e convenções dos diretórios acima. Para exemplos SK (chains), seguir estilo semelhante e explanar limitações quando comparado ao grafo equivalente.
 
 
+
+---
+
+### Relatórios por Capítulo (consolidar resultados dos benchmarks)
+
+Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos resumidos gerados em `graph-ia-book/src/Benchmark/results` em uma seção clara de “Resultados e Métricas” dentro do arquivo correspondente em `graph-ia-book/docs/book`. Inclua referências aos arquivos `.json` e `.md` de sumário, 1 gráfico simples (linha/boxplot) quando aplicável, e uma checklist curta de reprodutibilidade com o comando do script em `graph-ia-book/src/Scripts`.
+
+- [x] 00e — Introdução (docs/book/00e-introducao.md)
+  - [x] Consolidar `src/Benchmark/results/00e_*`
+  - [x] Criar “Resultados e Métricas” em `docs/reports/00e-introducao.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist de reprodutibilidade (scripts `run-00e-*.ps1|.sh`)
+
+- [ ] Capítulo 1 — Problema da Complexidade (docs/book/02-capitulo-1.md)
+  - [ ] Consolidar `src/Benchmark/results/chapter1_*`
+  - [ ] Criar `docs/reports/02-capitulo-1.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `Scripts/run.ps1 -chapter 1 -mode b`)
+
+- [ ] Capítulo 2 — Base Matemática (docs/book/03-capitulo-2.md)
+  - [ ] Consolidar `src/Benchmark/results/cap2_*`
+  - [ ] Criar `docs/reports/03-capitulo-2.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 2 -mode b`)
+
+- [ ] Capítulo 3 — Orquestração (docs/book/04-capitulo-3.md)
+  - [ ] Consolidar `src/Benchmark/results/cap3_*`
+  - [ ] Criar `docs/reports/04-capitulo-3.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 3 -mode b`)
+
+- [ ] Capítulo 4 — Explosão de Estados (docs/book/06-capitulo-4.md)
+  - [ ] Consolidar `src/Benchmark/results/cap4_*`
+  - [ ] Criar `docs/reports/06-capitulo-4.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 4 -mode b`)
+
+- [ ] Capítulo 5 — Explicabilidade (docs/book/08-capitulo-5.md)
+  - [ ] Consolidar `src/Benchmark/results/cap5_*`
+  - [ ] Criar `docs/reports/08-capitulo-5.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 5 -mode b`)
+
+- [ ] Capítulo 6 — Escalabilidade (docs/book/09-capitulo-6.md)
+  - [ ] Consolidar `src/Benchmark/results/cap6_*`
+  - [ ] Criar `docs/reports/09-capitulo-6.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 6 -mode b`)
+
+- [ ] Capítulo 7 — Resiliência (docs/book/10-capitulo-7.md)
+  - [ ] Consolidar `src/Benchmark/results/cap7_*`
+  - [ ] Criar `docs/reports/10-capitulo-7.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 7 -mode b`)
+
+- [ ] Capítulo 8 — Integração Multimodal (docs/book/11-capitulo-8.md)
+  - [ ] Consolidar `src/Benchmark/results/cap8_*`
+  - [ ] Criar `docs/reports/11-capitulo-8.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 8 -mode b`)
+
+- [ ] Capítulo 9 — Governança (docs/book/12-capitulo-9.md)
+  - [ ] Consolidar `src/Benchmark/results/cap9_*`
+  - [ ] Criar `docs/reports/12-capitulo-9.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 9 -mode b`)
+
+- [ ] Capítulo 10 — Diamante (docs/book/14-capitulo-10.md)
+  - [ ] Consolidar `src/Benchmark/results/cap10_*`
+  - [ ] Criar `docs/reports/14-capitulo-10.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 10 -mode b`)
+
+- [ ] Capítulo 11 — Aplicações (docs/book/15-capitulo-11.md)
+  - [ ] Consolidar `src/Benchmark/results/cap11_*`
+  - [ ] Criar `docs/reports/15-capitulo-11.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 11 -mode b`)
+
+- [ ] Capítulo 12 — Agentes Autônomos (docs/book/16-capitulo-12.md)
+  - [ ] Consolidar `src/Benchmark/results/cap12_*`
+  - [ ] Criar `docs/reports/16-capitulo-12.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 12 -mode b`)
+
+- [ ] Capítulo 13 — Limitações (docs/book/18-capitulo-13.md)
+  - [ ] Consolidar `src/Benchmark/results/cap13_*`
+  - [ ] Criar `docs/reports/18-capitulo-13.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 13 -mode b`)
+
+- [ ] Capítulo 14 — Tendências (docs/book/19-capitulo-14.md)
+  - [ ] Consolidar `src/Benchmark/results/cap14_*`
+  - [ ] Criar `docs/reports/19-capitulo-14.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 14 -mode b`)
+
+- [ ] Capítulo 15 — Síntese 3 Ramos (docs/book/35-capitulo-15.md)
+  - [ ] Consolidar `src/Benchmark/results/cap15_*`
+  - [ ] Criar `docs/reports/35-capitulo-15.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 15 -mode b`)
+
+- [ ] Capítulo 16 — Expressividade (docs/book/22-capitulo-16.md)
+  - [ ] Consolidar `src/Benchmark/results/cap16_*`
+  - [ ] Criar `docs/reports/22-capitulo-16.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 16 -mode b`)
+
+- [ ] Capítulo 17 — Caminho Crítico (docs/book/23-capitulo-17.md)
+  - [ ] Consolidar `src/Benchmark/results/cap17_*`
+  - [ ] Criar `docs/reports/23-capitulo-17.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 17 -mode b`)
+
+- [ ] Capítulo 18 — Álgebra de Grafos (docs/book/24-capitulo-18.md)
+  - [ ] Consolidar `src/Benchmark/results/cap18_*`
+  - [ ] Criar `docs/reports/24-capitulo-18.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 18 -mode b`)
+
+- [ ] Capítulo 19 — Autômatos e Linguagens (docs/book/26-capitulo-19.md)
+  - [ ] Consolidar `src/Benchmark/results/cap19_*`
+  - [ ] Criar `docs/reports/26-capitulo-19.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 19 -mode b`)
+
+- [ ] Capítulo 20 — A definir (docs/book/27-capitulo-20.md)
+  - [ ] Consolidar `src/Benchmark/results/cap20_*`
+  - [ ] Criar `docs/reports/27-capitulo-20.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 20 -mode b`)
+
+- [ ] Capítulo 21 — Markov (docs/book/28-capitulo-21.md)
+  - [ ] Consolidar `src/Benchmark/results/cap21_*`
+  - [ ] Criar `docs/reports/28-capitulo-21.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 21 -mode b`)
+
+- [ ] Capítulo 22 — Resiliência Probabilística (docs/book/29-capitulo-22.md)
+  - [ ] Consolidar `src/Benchmark/results/cap22_*`
+  - [ ] Criar `docs/reports/29-capitulo-22.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 22 -mode b`)
+
+- [ ] Capítulo 23 — A definir (docs/book/31-capitulo-23.md)
+  - [ ] Consolidar `src/Benchmark/results/cap23_*`
+  - [ ] Criar `docs/reports/31-capitulo-23.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 23 -mode b`)
+
+- [ ] Capítulo 24 — Topologias e Anti-padrões (docs/book/32-capitulo-24.md)
+  - [ ] Consolidar `src/Benchmark/results/cap24_*`
+  - [ ] Criar `docs/reports/32-capitulo-24.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 24 -mode b`)
+
+- [ ] Capítulo 25 — A definir (docs/book/33-capitulo-25.md)
+  - [ ] Consolidar `src/Benchmark/results/cap25_*`
+  - [ ] Criar `docs/reports/33-capitulo-25.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 25 -mode b`)
+
+- [ ] Capítulo 26 — A definir (docs/book/34-capitulo-26.md)
+  - [ ] Consolidar `src/Benchmark/results/cap26_*`
+  - [ ] Criar `docs/reports/34-capitulo-26.md` com links, tabela e descritivo sobre o resultado
+  - [ ] Incluir checklist (script `run.ps1 -chapter 26 -mode b`)

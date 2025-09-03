@@ -1,0 +1,11 @@
+{
+  "Name": "cap11/theory/finance",
+  "Timestamp": "2025-09-03T06:52:22.9738435+00:00",
+  "Data": {
+    "isAcyclic": true,
+    "topologicalOrder": "decision -\u003E external -\u003E geo -\u003E hist -\u003E ml -\u003E start",
+    "chain_ms_sum": 27,
+    "graph_ms_sum": 12,
+    "graph_parallel_branch_ms": 8
+  }
+}

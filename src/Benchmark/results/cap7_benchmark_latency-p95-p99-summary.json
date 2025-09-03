@@ -1,8 +1,8 @@
 {
   "Name": "cap7/benchmark/latency-p95-p99",
   "Iterations": 50,
-  "MeanMs": 15,
+  "MeanMs": 14,
   "P95Ms": 16,
-  "P99Ms": 17,
-  "Timestamp": "2025-09-02T18:16:41.8942099+00:00"
+  "P99Ms": 16,
+  "Timestamp": "2025-09-03T06:51:18.5679599+00:00"
 }

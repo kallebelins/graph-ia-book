@@ -1,0 +1,10 @@
+{
+  "Name": "cap4/theory/state-counts",
+  "Timestamp": "2025-09-03T06:50:42.6647275+00:00",
+  "Data": {
+    "k_branching_per_stage": 3,
+    "n_stages": 5,
+    "chain_states_upper_bound": 243,
+    "graph_convergence_note": "shared handler reduces effective states by reuse/convergence"
+  }
+}

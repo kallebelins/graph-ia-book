@@ -1,0 +1,8 @@
+{
+  "Name": "cap11/benchmark/finance_chain_latency",
+  "Iterations": 30,
+  "MeanMs": 79,
+  "P95Ms": 80,
+  "P99Ms": 82,
+  "Timestamp": "2025-09-03T06:52:18.091184+00:00"
+}

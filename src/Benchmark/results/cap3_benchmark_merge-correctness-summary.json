@@ -1,0 +1,8 @@
+{
+  "Name": "cap3/benchmark/merge-correctness",
+  "Iterations": 20,
+  "MeanMs": 50,
+  "P95Ms": 60,
+  "P99Ms": 207,
+  "Timestamp": "2025-09-03T06:50:27.3698941+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "Name": "cap2/theory/expressivity",
+  "Timestamp": "2025-09-03T06:50:14.2655138+00:00",
+  "Data": {
+    "isAcyclic": true,
+    "topologicalOrder": "a -\u003E b -\u003E merge -\u003E normalize -\u003E start",
+    "chain_path_count": 1,
+    "graph_parallel_branches": 2,
+    "expressivity_relation": "chain \u2282 DAG \u2282 graph"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Name": "chapter1/theory/makespan",
+  "Timestamp": "2025-09-03T06:50:04.829292+00:00",
+  "Data": {
+    "isAcyclic": true,
+    "topologicalOrder": "merge -\u003E preprocess -\u003E reason -\u003E retrieve -\u003E start -\u003E verify",
+    "chain_ms_sum": 43,
+    "graph_ms_sum": 42,
+    "graph_parallel_branch_ms": 20,
+    "brent_bound": 42
+  }
+}

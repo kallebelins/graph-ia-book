@@ -1,0 +1,8 @@
+{
+  "Name": "cap13/benchmark/graph-latency",
+  "Iterations": 50,
+  "MeanMs": 45,
+  "P95Ms": 48,
+  "P99Ms": 48,
+  "Timestamp": "2025-09-03T06:52:56.0590743+00:00"
+}

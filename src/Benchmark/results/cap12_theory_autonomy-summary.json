@@ -1,0 +1,11 @@
+{
+  "Name": "cap12/theory/autonomy",
+  "Timestamp": "2025-09-03T06:52:44.7345884+00:00",
+  "Data": {
+    "isAcyclic": true,
+    "topologicalOrder": "analyze -\u003E code -\u003E condCode -\u003E condFaq -\u003E escalate -\u003E faq -\u003E merge -\u003E start",
+    "chain_path_count": 1,
+    "graph_alternative_paths": 3,
+    "autonomy_relation": "chain = sequ\u00EAncia r\u00EDgida; graph = espa\u00E7o de caminhos com decis\u00E3o nativa"
+  }
+}

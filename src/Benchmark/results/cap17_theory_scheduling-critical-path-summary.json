@@ -1,0 +1,20 @@
+{
+  "Name": "cap17/theory/scheduling-critical-path",
+  "Timestamp": "2025-09-03T06:54:15.1622888+00:00",
+  "Data": {
+    "tA_ms": 100,
+    "tB_ms": 130,
+    "tC_ms": 90,
+    "tD_ms": 110,
+    "tE_ms": 70,
+    "tMerge_ms": 50,
+    "t_chain_sum_ms": 550,
+    "t_graph_critical_ms": 360,
+    "paths_ms": {
+      "B-\u003ED-\u003EE-\u003Emerge": 360,
+      "B-\u003EC-\u003EE-\u003Emerge": 340,
+      "A-\u003EC-\u003EE-\u003Emerge": 310
+    },
+    "relation": "T_chain = sum; T_graph = max over paths (critical path)"
+  }
+}

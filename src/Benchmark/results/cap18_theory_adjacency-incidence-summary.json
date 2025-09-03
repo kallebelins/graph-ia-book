@@ -1,0 +1,73 @@
+{
+  "Name": "cap18/theory/adjacency-incidence",
+  "Timestamp": "2025-09-03T06:54:29.2965881+00:00",
+  "Data": {
+    "A": [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "A2": [
+      [
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "out_degrees": [
+      2,
+      1,
+      1,
+      0
+    ],
+    "in_degrees": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "reachable_1_to_4": true,
+    "acyclic": true,
+    "notes": "A^2[1,4]=2 (duas trilhas). Acyclic true pois nenhuma diagonal aparece em pot\u00EAncias \u003C n."
+  }
+}

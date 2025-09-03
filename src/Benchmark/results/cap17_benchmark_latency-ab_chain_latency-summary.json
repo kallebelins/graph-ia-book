@@ -1,0 +1,8 @@
+{
+  "Name": "cap17/benchmark/latency-ab_chain_latency",
+  "Iterations": 30,
+  "MeanMs": 607,
+  "P95Ms": 626,
+  "P99Ms": 678,
+  "Timestamp": "2025-09-03T06:54:03.5197721+00:00"
+}

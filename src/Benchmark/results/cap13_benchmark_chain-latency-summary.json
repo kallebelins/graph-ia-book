@@ -1,0 +1,8 @@
+{
+  "Name": "cap13/benchmark/chain-latency",
+  "Iterations": 50,
+  "MeanMs": 46,
+  "P95Ms": 48,
+  "P99Ms": 48,
+  "Timestamp": "2025-09-03T06:52:53.7413587+00:00"
+}

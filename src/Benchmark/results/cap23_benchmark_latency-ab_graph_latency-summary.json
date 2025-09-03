@@ -1,0 +1,8 @@
+{
+  "Name": "cap23/benchmark/latency-ab_graph_latency",
+  "Iterations": 30,
+  "MeanMs": 3,
+  "P95Ms": 1,
+  "P99Ms": 84,
+  "Timestamp": "2025-09-03T06:55:27.7074877+00:00"
+}

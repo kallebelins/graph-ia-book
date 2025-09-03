@@ -1,0 +1,12 @@
+{
+  "Name": "cap24/theory/topologies-makespan",
+  "Timestamp": "2025-09-03T06:55:43.3795055+00:00",
+  "Data": {
+    "preprocess_ms": 5,
+    "branch_durations_ms": "12,10,9,8,7",
+    "aggregator_ms": 6,
+    "t_chain_sum_ms": 57,
+    "t_graph_critical_ms": 23,
+    "speedup_chain_over_graph": "2,48"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "Name": "cap26/theory/pilot-validation",
+  "Timestamp": "2025-09-03T06:56:24.6895016+00:00",
+  "Data": {
+    "top1_accuracy": 1,
+    "notes": "Preditor baseado em features estruturais escolhe a rota de menor lat\u00EAncia real no dataset sint\u00E9tico."
+  }
+}

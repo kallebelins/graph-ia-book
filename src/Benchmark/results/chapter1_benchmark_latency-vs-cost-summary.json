@@ -1,8 +1,8 @@
 {
   "Name": "chapter1/benchmark/latency-vs-cost",
   "Iterations": 50,
-  "MeanMs": 13,
-  "P95Ms": 16,
-  "P99Ms": 16,
-  "Timestamp": "2025-09-02T18:06:34.3078643+00:00"
+  "MeanMs": 74,
+  "P95Ms": 84,
+  "P99Ms": 90,
+  "Timestamp": "2025-09-03T06:50:04.8243713+00:00"
 }

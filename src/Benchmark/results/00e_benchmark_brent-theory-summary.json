@@ -1,0 +1,14 @@
+{
+  "Name": "00e/benchmark/brent-theory",
+  "Timestamp": "2025-09-03T06:49:49.5536562+00:00",
+  "Data": {
+    "t_stage1_ms": 10,
+    "t_A_ms": 6,
+    "t_B_ms": 6,
+    "t_seq_ms": 22,
+    "t_parallel_ms": 16,
+    "processors_p": 2,
+    "brent_lower_bound_ms": 16,
+    "speedup_ideal": 1.375
+  }
+}

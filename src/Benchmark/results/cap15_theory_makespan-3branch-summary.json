@@ -1,0 +1,13 @@
+{
+  "Name": "cap15/theory/makespan-3branch",
+  "Timestamp": "2025-09-03T06:53:14.2885094+00:00",
+  "Data": {
+    "samples": 50,
+    "merge_ms": 10,
+    "mean_chain_ms": 325,
+    "mean_graph_ms": 137,
+    "expected_speedup_chain_over_graph": 2.372,
+    "cost_proxy_chain": 325,
+    "cost_proxy_graph": 137
+  }
+}
