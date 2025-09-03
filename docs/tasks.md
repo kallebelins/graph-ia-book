@@ -391,10 +391,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/02-capitulo-1.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `Scripts/run.ps1 -chapter 1 -mode b`)
 
-- [ ] Capítulo 2 — Base Matemática (docs/book/03-capitulo-2.md)
-  - [ ] Consolidar `src/Benchmark/results/cap2_*`
-  - [ ] Criar `docs/reports/03-capitulo-2.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 2 -mode b`)
+- [x] Capítulo 2 — Base Matemática (docs/book/03-capitulo-2.md)
+  - [x] Consolidar `src/Benchmark/results/cap2_*`
+  - [x] Criar `docs/reports/03-capitulo-2.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 2 -mode b`)
 
 - [ ] Capítulo 3 — Orquestração (docs/book/04-capitulo-3.md)
   - [ ] Consolidar `src/Benchmark/results/cap3_*`
