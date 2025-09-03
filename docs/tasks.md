@@ -436,10 +436,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/14-capitulo-10.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 10 -mode b`)
 
-- [ ] Capítulo 11 — Aplicações (docs/book/15-capitulo-11.md)
-  - [ ] Consolidar `src/Benchmark/results/cap11_*`
-  - [ ] Criar `docs/reports/15-capitulo-11.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 11 -mode b`)
+- [x] Capítulo 11 — Aplicações (docs/book/15-capitulo-11.md)
+  - [x] Consolidar `src/Benchmark/results/cap11_*`
+  - [x] Criar `docs/reports/15-capitulo-11.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 11 -mode b`)
 
 - [ ] Capítulo 12 — Agentes Autônomos (docs/book/16-capitulo-12.md)
   - [ ] Consolidar `src/Benchmark/results/cap12_*`
