@@ -340,9 +340,11 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Doc: `docs/examples/35-capitulo-15.md`
 
 ### 36-glossario-tecnico.md — Glossário
-- [ ] Criar exemplos mínimos por termo-chave (DAG, ordem topológica, betweenness, caminho crítico)
-- [ ] Adicionar snippets SKG demonstrando checagens/medições simples onde fizer sentido
-- [ ] Doc: `docs/examples/36-glossario.md`
+- [x] Criar exemplos mínimos por termo-chave (DAG, ordem topológica, betweenness, caminho crítico)
+  - Código: `graph-ia-book/src/Glossary/GlossaryExamples.cs`
+- [x] Adicionar snippets SKG demonstrando checagens/medições simples onde fizer sentido
+  - Doc: `graph-ia-book/docs/examples/36-glossario.md`
+- [x] Doc: `docs/examples/36-glossario.md`
 
 ---
 
