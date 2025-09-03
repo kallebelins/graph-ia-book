@@ -246,12 +246,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap17_theory_scheduling-critical-path-summary.{json,md}`
 - [x] Doc: `docs/examples/23-capitulo-17.md`
 
-### 24-capitulo-18.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/24-capitulo-18.md`
+### 24-capitulo-18.md — Álgebra de Grafos: Matrizes de Adjacência e Incidência
+- [x] SK: chain com análise sequencial (A, graus, alcançabilidade, aciclicidade)
+  - Código: `graph-ia-book/src/chains/chapter18/ChainChapter18.cs`
+- [x] SKG: grafo com ramos paralelos (graus, alcançabilidade, aciclicidade) + merge
+  - Código: `graph-ia-book/src/graphs/chapter18/GraphChapter18.cs`
+- [x] Métricas: medir média, p95/p99, custo de tokens (parcial: latência padronizada)
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter18.cs` (métodos `Run*`)
+- [x] Validação: escrita de teoria (A, A^2, graus, aciclicidade) alinhada ao texto
+  - Arquivo gerado: `src/Benchmark/results/cap18/theory/adjacency-incidence-summary.{json,md}`
+- [x] Doc: `docs/examples/24-capitulo-18.md`
 
 ### 26-capitulo-19.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
