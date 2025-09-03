@@ -224,12 +224,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap14_benchmark_dynamic-rule-summary.{json,md}`
 - [x] Doc: `docs/examples/19-capitulo-14.md`
 
-### 22-capitulo-16.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/22-capitulo-16.md`
+### 22-capitulo-16.md — Teoremas de Expressividade: Chains ⊂ DAGs e Limites
+- [x] SK: chain com k módulos independentes serializados + merge determinístico
+  - Código: `graph-ia-book/src/chains/chapter16/ChainChapter16.cs`
+- [x] SKG: grafo com k módulos independentes paralelos + merge determinístico
+  - Código: `graph-ia-book/src/graphs/chapter16/GraphChapter16.cs`
+- [x] Métricas: medir média, p95/p99; benchmark A/B chain vs graph
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter16.cs` (métodos `Run*`)
+- [x] Validação: escrever teoria T_chain vs T_DAG e redução O(log k)
+  - Arquivo gerado: `src/Benchmark/results/cap16_theory_expressivity-proofs-summary.{json,md}`
+- [x] Doc: `docs/examples/22-capitulo-16.md`
 
 ### 23-capitulo-17.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
