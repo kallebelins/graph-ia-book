@@ -476,10 +476,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/24-capitulo-18.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 18 -mode b`)
 
-- [ ] Capítulo 19 — Autômatos e Linguagens (docs/book/26-capitulo-19.md)
-  - [ ] Consolidar `src/Benchmark/results/cap19_*`
-  - [ ] Criar `docs/reports/26-capitulo-19.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 19 -mode b`)
+- [x] Capítulo 19 — Autômatos e Linguagens (docs/book/26-capitulo-19.md)
+  - [x] Consolidar `src/Benchmark/results/cap19_*`
+  - [x] Criar `docs/reports/26-capitulo-19.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 19 -mode b`)
 
 - [ ] Capítulo 20 — A definir (docs/book/27-capitulo-20.md)
   - [ ] Consolidar `src/Benchmark/results/cap20_*`
