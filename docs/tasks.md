@@ -275,12 +275,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
 - [x] Validação: adicionar verificação/prova alinhada ao texto
 - [x] Doc: `docs/examples/27-capitulo-20.md`
 
-### 28-capitulo-21.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/28-capitulo-21.md`
+### 28-capitulo-21.md — Processos Estocásticos em Grafos (Markov, Estados Absorventes)
+- [x] SK: definir chain conforme tópico do capítulo
+  - Código: `graph-ia-book/src/chains/chapter21/ChainChapter21.cs`
+- [x] SKG: definir grafo conforme tópico do capítulo
+  - Código: `graph-ia-book/src/graphs/chapter21/GraphChapter21.cs`
+- [x] Métricas: medir média, p95/p99, custo de tokens
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter21.cs` (métodos `Run*`)
+- [x] Validação: adicionar verificação/prova alinhada ao texto
+  - Arquivo gerado: `src/Benchmark/results/cap21/theory/markov-summary.{json,md}`
+- [x] Doc: `docs/examples/28-capitulo-21.md`
 
 ### 29-capitulo-22.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
