@@ -386,10 +386,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar “Resultados e Métricas” em `docs/reports/00e-introducao.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist de reprodutibilidade (scripts `run-00e-*.ps1|.sh`)
 
-- [ ] Capítulo 1 — Problema da Complexidade (docs/book/02-capitulo-1.md)
-  - [ ] Consolidar `src/Benchmark/results/chapter1_*`
-  - [ ] Criar `docs/reports/02-capitulo-1.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `Scripts/run.ps1 -chapter 1 -mode b`)
+- [x] Capítulo 1 — Problema da Complexidade (docs/book/02-capitulo-1.md)
+  - [x] Consolidar `src/Benchmark/results/chapter1_*`
+  - [x] Criar `docs/reports/02-capitulo-1.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `Scripts/run.ps1 -chapter 1 -mode b`)
 
 - [ ] Capítulo 2 — Base Matemática (docs/book/03-capitulo-2.md)
   - [ ] Consolidar `src/Benchmark/results/cap2_*`
