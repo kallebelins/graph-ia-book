@@ -466,10 +466,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/22-capitulo-16.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 16 -mode b`)
 
-- [ ] Capítulo 17 — Caminho Crítico (docs/book/23-capitulo-17.md)
-  - [ ] Consolidar `src/Benchmark/results/cap17_*`
-  - [ ] Criar `docs/reports/23-capitulo-17.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 17 -mode b`)
+- [x] Capítulo 17 — Caminho Crítico (docs/book/23-capitulo-17.md)
+  - [x] Consolidar `src/Benchmark/results/cap17_*`
+  - [x] Criar `docs/reports/23-capitulo-17.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 17 -mode b`)
 
 - [ ] Capítulo 18 — Álgebra de Grafos (docs/book/24-capitulo-18.md)
   - [ ] Consolidar `src/Benchmark/results/cap18_*`
