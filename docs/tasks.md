@@ -491,10 +491,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/28-capitulo-21.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 21 -mode b`)
 
-- [ ] Capítulo 22 — Resiliência Probabilística (docs/book/29-capitulo-22.md)
-  - [ ] Consolidar `src/Benchmark/results/cap22_*`
-  - [ ] Criar `docs/reports/29-capitulo-22.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 22 -mode b`)
+- [x] Capítulo 22 — Resiliência Probabilística (docs/book/29-capitulo-22.md)
+  - [x] Consolidar `src/Benchmark/results/cap22_*`
+  - [x] Criar `docs/reports/29-capitulo-22.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 22 -mode b`)
 
 - [ ] Capítulo 23 — A definir (docs/book/31-capitulo-23.md)
   - [ ] Consolidar `src/Benchmark/results/cap23_*`
