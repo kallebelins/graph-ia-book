@@ -257,12 +257,16 @@ Observação: ao concluir cada tarefa, marque [ ] e inclua links para arquivos c
   - Arquivo gerado: `src/Benchmark/results/cap18/theory/adjacency-incidence-summary.{json,md}`
 - [x] Doc: `docs/examples/24-capitulo-18.md`
 
-### 26-capitulo-19.md — A definir
-- [ ] SK: definir chain conforme tópico do capítulo
-- [ ] SKG: definir grafo conforme tópico do capítulo
-- [ ] Métricas: medir média, p95/p99, custo de tokens
-- [ ] Validação: adicionar verificação/prova alinhada ao texto
-- [ ] Doc: `docs/examples/26-capitulo-19.md`
+### 26-capitulo-19.md — Grafos, Autômatos e Linguagens Formais
+- [x] SK: chain (AFND sobre DAG rotulado; tamanho do AFD)
+  - Código: `graph-ia-book/src/chains/chapter19/ChainChapter19.cs`
+- [x] SKG: grafo (ramos paralelos: aceitação + tamanho do AFD)
+  - Código: `graph-ia-book/src/graphs/chapter19/GraphChapter19.cs`
+- [x] Métricas: média, p95/p99; benchmark A/B chain vs graph
+  - Capítulo: `graph-ia-book/src/Chapters/Chapter19.cs` (métodos `Run*`)
+- [x] Validação: regularidade em DAGs; aceitação de exemplos; tamanho do AFD
+  - Arquivo gerado: `src/Benchmark/results/cap19/theory/regularity-nfa-dfa-summary.{json,md}`
+- [x] Doc: `docs/examples/26-capitulo-19.md`
 
 ### 27-capitulo-20.md — A definir
 - [ ] SK: definir chain conforme tópico do capítulo
