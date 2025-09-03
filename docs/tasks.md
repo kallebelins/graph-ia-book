@@ -496,15 +496,15 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/29-capitulo-22.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 22 -mode b`)
 
-- [ ] Capítulo 23 — A definir (docs/book/31-capitulo-23.md)
-  - [ ] Consolidar `src/Benchmark/results/cap23_*`
-  - [ ] Criar `docs/reports/31-capitulo-23.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 23 -mode b`)
+- [x] Capítulo 23 — A definir (docs/book/31-capitulo-23.md)
+  - [x] Consolidar `src/Benchmark/results/cap23_*`
+  - [x] Criar `docs/reports/31-capitulo-23.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 23 -mode b`)
 
-- [ ] Capítulo 24 — Topologias e Anti-padrões (docs/book/32-capitulo-24.md)
-  - [ ] Consolidar `src/Benchmark/results/cap24_*`
-  - [ ] Criar `docs/reports/32-capitulo-24.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 24 -mode b`)
+- [x] Capítulo 24 — Topologias e Anti-padrões (docs/book/32-capitulo-24.md)
+  - [x] Consolidar `src/Benchmark/results/cap24_*`
+  - [x] Criar `docs/reports/32-capitulo-24.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 24 -mode b`)
 
 - [ ] Capítulo 25 — A definir (docs/book/33-capitulo-25.md)
   - [ ] Consolidar `src/Benchmark/results/cap25_*`
