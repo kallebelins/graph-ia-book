@@ -10,12 +10,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\semantic-kernel-graph\src\SemanticKernel.Graph\SemanticKernel.Graph.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="Microsoft.SemanticKernel" Version="1.61.0" />
 		<PackageReference Include="Microsoft.SemanticKernel.Abstractions" Version="1.61.0" />
+		<PackageReference Include="SemanticKernel.Graph" Version="25.8.191" />
 		<PackageReference Include="System.Text.Json" Version="9.0.7" />
 		<!-- Add xUnit for test attributes referenced in src/tests -->
 		<PackageReference Include="xunit" Version="2.5.1" />

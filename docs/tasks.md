@@ -9,10 +9,9 @@ Este documento organiza, por capítulo do livro em `graph-ia-book/docs/book`, as
 
 Regras gerais:
 - Siga estritamente a arquitetura, padrões e exemplos dos diretórios de referência:
-  - Biblioteca (SKG): `semantic-kernel-graph/src/SemanticKernel.Graph`
-  - Exemplos (SKG): `semantic-kernel-graph-docs/examples`
-  - Testes (SKG): `semantic-kernel-graph/src/SemanticKernel.Graph.Tests`
-  - Documentação (SKG): `semantic-kernel-graph-docs/docs`
+  - Biblioteca (SKG): `SemanticKernel.Graph` (Nuget)
+  - Exemplos (SKG): `https://github.com/kallebelins/semantic-kernel-graph-docs/tree/main/examples`
+  - Documentação (SKG): `https://skgraph.dev/`
 - Para os exemplos SK (chains), referenciar guia oficial do Semantic Kernel e manter estilo consistente com os exemplos SKG.
 - Todos os artefatos de código deste plano serão criados em `graph-ia-book/src`.
 - Cada capítulo deve conter: (1) um exemplo SK, (2) um exemplo SKG, (3) métricas comparativas (latência média, p95/p99, custo de tokens, acertos/precisão quando aplicável), (4) mini-prova ou validação matemática conectada ao texto, (5) checklist de reprodutibilidade.
