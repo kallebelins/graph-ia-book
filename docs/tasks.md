@@ -406,10 +406,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/06-capitulo-4.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 4 -mode b`)
 
-- [ ] Capítulo 5 — Explicabilidade (docs/book/08-capitulo-5.md)
-  - [ ] Consolidar `src/Benchmark/results/cap5_*`
-  - [ ] Criar `docs/reports/08-capitulo-5.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 5 -mode b`)
+- [x] Capítulo 5 — Explicabilidade (docs/book/08-capitulo-5.md)
+  - [x] Consolidar `src/Benchmark/results/cap5_*`
+  - [x] Criar `docs/reports/08-capitulo-5.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 5 -mode b`)
 
 - [ ] Capítulo 6 — Escalabilidade (docs/book/09-capitulo-6.md)
   - [ ] Consolidar `src/Benchmark/results/cap6_*`
