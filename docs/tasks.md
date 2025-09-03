@@ -461,10 +461,10 @@ Observação: para cada capítulo abaixo, o objetivo é transformar os arquivos 
   - [x] Criar `docs/reports/35-capitulo-15.md` com links, tabela e descritivo sobre o resultado
   - [x] Incluir checklist (script `run.ps1 -chapter 15 -mode b`)
 
-- [ ] Capítulo 16 — Expressividade (docs/book/22-capitulo-16.md)
-  - [ ] Consolidar `src/Benchmark/results/cap16_*`
-  - [ ] Criar `docs/reports/22-capitulo-16.md` com links, tabela e descritivo sobre o resultado
-  - [ ] Incluir checklist (script `run.ps1 -chapter 16 -mode b`)
+- [x] Capítulo 16 — Expressividade (docs/book/22-capitulo-16.md)
+  - [x] Consolidar `src/Benchmark/results/cap16_*`
+  - [x] Criar `docs/reports/22-capitulo-16.md` com links, tabela e descritivo sobre o resultado
+  - [x] Incluir checklist (script `run.ps1 -chapter 16 -mode b`)
 
 - [ ] Capítulo 17 — Caminho Crítico (docs/book/23-capitulo-17.md)
   - [ ] Consolidar `src/Benchmark/results/cap17_*`
