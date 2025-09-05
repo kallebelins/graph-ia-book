@@ -1,6 +1,6 @@
-﻿### Graph IA Book — Benchmarks Chain vs Graph com Semantic Kernel (SK) e Semantic Kernel Graph (SKG)
+﻿### Benchmarks Chain vs Graph com Semantic Kernel (SK) e Semantic Kernel Graph (SKG)
 
-Este diretório contém o runner e a documentação prática do livro/guia sobre orquestração baseada em grafos para IA, comparando pipelines lineares (chains com SK) e grafos de execução (graphs com SKG). Aqui você encontra:
+Este diretório contém o runner e a documentação prática do livro "Grafos e Inteligência Artificial - Uma Fundamentação Teórica e Aplicada para Orquestração de Sistemas" sobre orquestração baseada em grafos para IA, comparando pipelines lineares (chains com SK) e grafos de execução (graphs com SKG). Aqui você encontra:
 - Visão geral dos capítulos e objetivos
 - Como executar os exemplos (chain/graph) e os benchmarks
 - Índice com links para todos os exemplos e relatórios
